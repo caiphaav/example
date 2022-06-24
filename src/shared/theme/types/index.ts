@@ -10,6 +10,7 @@ export interface ITheme {
     sm: number;
     md: number;
     lg: number;
+    xl: number;
   };
   typography: {
     h1: ITypographyItem;

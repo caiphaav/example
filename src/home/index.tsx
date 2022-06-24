@@ -1,17 +1,23 @@
-import { SharedComponents, Paths } from "@shared";
-
-import { Link } from "react-router-dom";
+import { SharedComponents, SharedTypes, Theme } from "@shared";
 
 export const Home = () => {
+  const {
+    spacing: { md, xl },
+  } = Theme.useStyledTheme();
   return (
-    <div>
-      <SharedComponents.Text text={"Home page"} />
-      <Link to={Paths.CONTACT_US}>
-        <SharedComponents.Text text={"Navigate to contact us"} />
-      </Link>
-      <Link to={Paths.ABOUT}>
-        <SharedComponents.Text text={"Navigate to about"} />
-      </Link>
-    </div>
+    <SharedComponents.Screen>
+      <SharedComponents.Column>
+        <SharedComponents.Text type={SharedTypes.FontTypes.h1} text={"Home"} />
+        <SharedComponents.VerticalBox height={xl} />
+        <SharedComponents.Text text={"Выберите город:"} />
+        <SharedComponents.VerticalBox height={md} />
+        <input />
+        <SharedComponents.VerticalBox height={xl} />
+        <SharedComponents.Text
+          text={"Погода сейчас:"}
+          type={SharedTypes.FontTypes.h2}
+        />
+      </SharedComponents.Column>
+    </SharedComponents.Screen>
   );
 };

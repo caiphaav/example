@@ -5,6 +5,7 @@ export const lightTheme: ITheme = {
     sm: 8,
     md: 16,
     lg: 24,
+    xl: 44,
   },
   typography: {
     h1: {
