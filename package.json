@@ -45,6 +45,7 @@
     ]
   },
   "devDependencies": {
+    "@types/styled-components": "^5.1.25",
     "babel-plugin-module-resolver": "^4.1.0",
     "cz-conventional-changelog": "3.3.0",
     "husky": "^8.0.1",
